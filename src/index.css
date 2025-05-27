@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .navSelect{
+   @apply bg-gray-600
+  }
+  .buttonD{
+        @apply relative w-[110px] h-[25x] mt-2 text-[15px] font-inter text-[#FA812F] rounded-sm outline outline-2 outline-[#FA812F] hover:text-white  z-[0];
+    }
+    
+  .buttonD::after{
+      @apply bg-[#FA812F] h-[25px] bottom-[0px] w-[0%] left-0 rounded-sm  absolute content-[''] z-[-1] duration-200;
+
+  }
+  .buttonD::after:hover{
+      @apply w-[100%]
+  }
+  .buttonC{
+     @apply relative w-[40px] h-[40x] items-center flex justify-center mt-2 text-[15px] font-inter text-[#FA812F] rounded-sm outline outline-2 outline-[#FA812F] hover:text-white  z-[0];
+  }
+  .buttonC::after{
+      @apply bg-[#FA812F] h-[25px] bottom-[0px] w-[0%] left-0 rounded-sm  absolute content-[''] z-[-1] duration-200;
+
+  }
+  .buttonC::after:hover{
+      @apply w-[100%]
+  }
+
+}
+
+
