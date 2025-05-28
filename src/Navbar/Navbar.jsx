@@ -10,13 +10,14 @@ export default function Navbar({menu,setMenu}){
         {icon:<FiActivity/>, name: 'Activty', path : '/activity'},
     ];
     return(
-        <div className={`${menu ?  'w-20 h-screen overflow-hidden transition-all duration-500 ease-in-out' : 'w-1/4 h-screen overflow-visible transition-all duration-500 ease-in-out' }`}>
-            <div className={`w-[100%] h-10 ${!menu ? 'flex justify-between items-center': 'flex items-center justify-center'}`}>
+        <div className={`${menu ?  'w-20 h-screen overflow-hidden transition-all duration-500 ease-in-out' : 'w-1/4  h-screen overflow-visible transition-all duration-500 ease-in-out' }`}>
+
+            <div className={`w-[100%] h-16 ${!menu ? 'flex justify-between items-center': 'flex items-center justify-center'}`}>
                 
-                <div className={`${menu ? 'w-0 overflow-hidden' : 'overflow-visible w-20 p-20 transition-all duration-500' }  text-white font-bold`}>Welcome</div>
+                <div className={`${menu ? 'w-0 overflow-hidden' : 'overflow-visible w-20 p-[120px] transition-all duration-500' }  text-white text-2xl font-bold`}>Welcome</div>
              
                 <a  href="#" 
-                    className={`absolute top-3 ${menu ? 'left-[122px]' : 'left-[300px]'} text-white text-xl transition-all duration-500`}
+                    className={`absolute top-5 ${menu ? 'left-[150px]' : 'left-[380px]'} text-white text-2xl transition-all duration-500`}
                     onClick={(e)=>{
                         e.preventDefault();
                         setMenu(!menu);
@@ -25,10 +26,10 @@ export default function Navbar({menu,setMenu}){
                 ><FaArrowRightArrowLeft/></a>
             </div>
             <div className={`${menu ? 'flex flex-col w-[100%] ' : 'flex w-[100%] h-[150px] ' }  mt-5`}>
-                <div className={`absolute  ${menu ? 'h-10 w-10 left-[115px]' : ' left-[170px] h-20 w-20' } transition-all duration-500 bg-white rounded-full mt-2`}></div>
-                <div className={`${menu ? 'overflow-hidden': 'overflow-visible text-white mt-[100px] ml-[75px] transition-all duration-500'} `}>Ridho Soru</div>
+                <div className={`absolute  ${menu ? 'h-10 w-10 left-[140px]' : ' left-[250px] h-20 w-20' } transition-all duration-500 bg-white rounded-full mt-2`}></div>
+                <div className={`${menu ? 'overflow-hidden': 'overflow-visible text-white text-xl mt-[100px] ml-[120px] transition-all duration-500'} `}>Ridho Soru</div>
             </div>
-            <div className={`${menu ? 'top-[200px] left-[120px]  absolute w-[40px] h-[300px]' : 'absolute top-[200px] left-[120px] w-[200px] h-[300px] ' }  flex flex-col mt-5`}>
+            <div className={`${menu ? 'top-[280px] left-[140px]  absolute w-[40px] h-[300px]' : 'absolute top-[280px] left-[210px] w-[200px] h-[300px] ' } transition-all duration-500  flex flex-col mt-5`}>
                 {NavbarItem.map((item,index)=>(
                     <Link  to={item.path} 
                         key={index}

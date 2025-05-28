@@ -47,7 +47,7 @@ export default function Home({menu}){
     function Verticalpro(){
         return(
             <div className={`w-1 rounded-xl bg-[#FA812F] mt-7`}
-                style={!menu ? { height: `${(proexp.length - 0.8) * 50}px` } : {}}
+                style={!menu ? { height: `${(proexp.length - 1) * 100}px` } : {}}
                         
                 >
                     <div>
@@ -56,14 +56,14 @@ export default function Home({menu}){
                                     key={index}
                             >
                                 <div    className={`absolute -translate-x-1 w-3 h-3 rounded-full bg-[#FA812F]`}
-                                        style={{ top: `${index * 50}px`}}
+                                        style={{ top: `${index * 100}px`}}
                                 ></div>
-                                <div    className={`absolute flex flex-col ${index % 2 === 0  ? 'left-[4px]' : 'right-[4px]'}  -translate-y-1/2 items-center justify-center h-[40px] w-[140px] text-white`}
-                                        style={{ top: `${index * 50}px` }}
+                                <div    className={`absolute flex flex-col ${index % 2 === 0  ? 'left-3' : 'right-[6px]'}  -translate-y-1/2 items-center justify-center h-[40px] w-[200px] text-white`}
+                                        style={{ top: `${index * 100}px` }}
                                 >
-                                    <div className=" text-[10px] text-center font-bold">{item.name}</div>
-                                    <div className=" text-[8px] text-center italic text-gray-400">{item.position}</div>
-                                    <div className=" text-[8px] text-gray-400">{item.year}</div>
+                                    <div className=" text-[14] text-center font-bold">{item.name}</div>
+                                    <div className=" text-[10px] text-center italic text-gray-400">{item.position}</div>
+                                    <div className=" text-[10px] text-gray-400">{item.year}</div>
                                 </div>
                             </div>
                         ))}    
@@ -76,7 +76,7 @@ export default function Home({menu}){
     function Verticalxp (){
         return(
         <div    className={`w-1 rounded-xl bg-[#FA812F] mt-7`}
-                style={!menu ? { height: `${(exp.length - 0.8) * 50}px` } : {}}
+                style={!menu ? { height: `${(exp.length - 1) * 100}px` } : {}}
                 >
                     <div>
                         {exp.map((item,index)=>(
@@ -84,14 +84,14 @@ export default function Home({menu}){
                                     key={index}
                             >
                                 <div    className={`absolute -translate-x-1 w-3 h-3 rounded-full bg-[#FA812F]`}
-                                        style={{ top: `${index * 50}px`}}
+                                        style={{ top: `${index * 100}px`}}
                                 ></div>
-                                <div    className={`absolute flex flex-col ${index % 2 === 0  ? 'left-[1px]' : 'right-[1px]'} -translate-y-1/2 items-center justify-center h-[40px] w-[140px] text-white`}
-                                        style={{ top: `${index * 50}px` }}
+                                <div    className={`absolute flex flex-col ${index % 2 === 0  ? 'left-[1px]' : 'right-[1px]'} -translate-y-1/2 items-center justify-center h-[40px] w-[250px] text-white`}
+                                        style={{ top: `${index * 100}px` }}
                                 >
-                                    <div className=" text-[10px] font-bold">{item.instansi}</div>
-                                    <div className=" text-[8px] italic text-gray-400">{item.division}</div>
-                                    <div className=" text-[8px] text-gray-400">{item.year}</div>
+                                    <div className=" text-[14px] font-bold">{item.instansi}</div>
+                                    <div className=" text-[10px] italic text-gray-400">{item.division}</div>
+                                    <div className=" text-[10px] text-gray-400">{item.year}</div>
                                 </div>
                             </div>
                         ))}    
@@ -102,7 +102,7 @@ export default function Home({menu}){
     function Horizonpro(){
         return(
             <div    className={`h-1 rounded-xl bg-[#FA812F] mt-[80px]`}
-                    style={menu ? { width: `${(proexp.length - 1) * 100}px` } : {}}
+                    style={menu ? { width: `${(proexp.length - 1) * 200}px` } : {}}
             >
                 {proexp.map((item,index)=>(
                     <div
@@ -110,14 +110,14 @@ export default function Home({menu}){
                         key={index}
                     >
                     <div    className={`absolute -translate-y-1 w-3 h-3 rounded-full bg-[#FA812F] `}
-                            style={{ left: `${index * 100}px`}}
+                            style={{ left: `${index * 200}px`}}
                     ></div>
-                    <div    className={`absolute flex flex-col ${index % 2 === 0  ? 'bottom-[20px]' : 'top-[20px]'}  -translate-x-1/2 items-center justify-center h-[40px] w-[140px] text-white`}
-                            style={{ left: `${index * 100 +3}px` }}
+                    <div    className={`absolute flex flex-col ${index % 2 === 0  ? 'bottom-[25px]' : 'top-[25px]'}  -translate-x-1/2 items-center text-center justify-center h-[40px] w-[250px] text-white`}
+                            style={{ left: `${index * 200 +3}px` }}
                     >
-                        <div className=" text-[10px] font-bold">{item.name}</div>
-                        <div className=" text-[8px] italic text-gray-400">{item.position}</div>
-                        <div className=" text-[8px] text-gray-400 ">{item.year}</div>
+                        <div className=" text-[14px] font-bold">{item.name}</div>
+                        <div className=" text-[10px] italic text-gray-400">{item.position}</div>
+                        <div className=" text-[10px] text-gray-400 ">{item.year}</div>
                     </div>
 
                     </div>
@@ -128,8 +128,8 @@ export default function Home({menu}){
 
     function Horizonexp(){
         return(
-            <div    className={`h-1 rounded-xl bg-[#FA812F] mt-[70px]`}
-                    style={menu ? { width: `${(exp.length - 0.8) * 50}px` } : {}}
+            <div    className={`h-1 rounded-xl bg-[#FA812F] mt-[80px]`}
+                    style={menu ? { width: `${(exp.length - 1) * 200}px` } : {}}
             >
                 {exp.map((item,index)=>(
                     <div
@@ -137,14 +137,14 @@ export default function Home({menu}){
                         key={index}
                     >
                     <div    className={`absolute -translate-y-1 w-3 h-3 rounded-full bg-[#FA812F]`}
-                            style={{ left: `${index * 50}px`}}
+                            style={{ left: `${index * 200}px`}}
                     ></div>
-                    <div    className={`absolute flex flex-col ${index % 2 === 0  ? 'bottom-[20px]' : 'top-[20px]'}  -translate-x-1/2 items-center justify-center h-[40px] w-[140px] text-white`}
-                            style={{ left: `${index * 50 +3}px` }}
+                    <div    className={`absolute flex flex-col ${index % 2 === 0  ? 'bottom-[20px]' : 'top-[20px]'}  -translate-x-1/2 items-center text-center justify-center h-[40px] w-[200px] text-white`}
+                            style={{ left: `${index * 200 +3}px` }}
                     >
-                        <div className=" text-[10px] font-bold">{item.instansi}</div>
-                        <div className=" text-[8px] italic text-gray-400 ">{item.division}</div>
-                        <div className=" text-[8px] text-gray-400 ">{item.year}</div>
+                        <div className=" text-[14px] font-bold">{item.instansi}</div>
+                        <div className=" text-[10px] italic text-gray-400 ">{item.division}</div>
+                        <div className=" text-[10px] text-gray-400 ">{item.year}</div>
                     </div>
 
                     </div>
@@ -158,11 +158,11 @@ export default function Home({menu}){
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}>
-            <div className={`${menu ? 'w-[500px]': 'w-[500px]'} ml-4 mt-2 flex flex-col h-[200px]`}>
+            <div className={`${menu ? 'w-[600px]': 'w-[600px]'} ml-4 mt-2 flex flex-col h-[240px]`}>
                 <div className="flex gap-2">
-                    <div className="text-white font-bold font-inter text-2xl"> Hello!</div> 
+                    <div className="text-white font-bold font-inter text-3xl"> Hello!</div> 
                     <motion.span
-                        className="inline-block origin-bottom"
+                        className="inline-block origin-bottom text-xl"
                         animate={{
                         rotate: [0, 10, -8, 5, -8, 10, 0],
                         }}
@@ -178,10 +178,10 @@ export default function Home({menu}){
                     <div className="text-[#FA812F] font-bold font-inter text-2xl"> Yohanes Ridho Soru</div>
                 </div>
                 <div>
-                    <div className="text-gray-400 text-[12px]">Riau Island-Indonesia</div>
+                    <div className="text-gray-400 text-lg]">Riau Island-Indonesia</div>
                 </div>
                 <div>
-                    <div className="italic text-[12px] mt-2 font-inter text-white">"An ordinary guy with an interest in the world of programming and electricity"</div>
+                    <div className="italic text-sm mt-2 font-inter text-white">"An ordinary guy with an interest in the world of programming and electricity"</div>
                 </div>
                 <div className=" flex gap-5 mt-2">
                     <button className={`buttonD`}>Download CV</button>
@@ -199,92 +199,89 @@ export default function Home({menu}){
                                 target="_blank" 
                                 className={`buttonC`}
                                 >{item.icon}</a>
-                            
                         ))
                     )}
-
                 </div>
-                
-                <div className={`${menu ? 'w-[820px] ml-2' : ' w-[680px] '} transition-all duration-500  h-[2px] rounded-xl mt-10  bg-slate-600`}></div>
+                <div className={`${menu ? 'w-[1040px] ml-2' : ' w-[860px] '} transition-all duration-500  h-[2px] rounded-xl mt-10  bg-slate-600`}></div>
             </div>
             <div className="flex flex-col">
-                <div className={`  ${menu ? 'w-[820px] h-[500px] ml-6' : 'w-[680px] h-[350px] ml-4 flex justify-between ' } transition-all duration-500 mt-2`}>
-                    <div className={`${menu ? 'h-[250px]  ':' w-[300px] h-[100%] '} flex flex-col items-center transition-all duration-500 `}>
-                        <div className="text-[#FA812F] font-inter font-bold">Experience</div>
-                        <div className="mt-5"> 
+                <div className={`  ${menu ? 'w-[1040px] h-[500px] ml-6' : 'w-[840px] h-[350px] ml-4 flex justify-between ' } transition-all duration-500 `}>
+                    <div className={`${menu ? 'h-[250px]  ':' w-[300px] h-[100%] '} flex flex-col items-center transition-all duration-500 mx-10`}>
+                        <div className="text-[#FA812F] text-2xl font-inter font-bold">Experience</div>
+                        <div className="mt-8"> 
                             {menu ? <Horizonexp /> : <Verticalxp />}
                         </div>
                     </div>
-                    <div className={`${menu ? 'h-[250px]  ':' w-[300px] h-[100%]  '} flex flex-col items-center transition-all duration-500 `}>
-                        <div className="text-[#FA812F] font-inter font-bold">Project Experience</div>
-                        <div className="mt-5"> 
+                    <div className={`${menu ? 'h-[250px] mt-5 ':' w-[300px] h-[100%]  '} flex flex-col items-center transition-all duration-500 mx-5 `}>
+                        <div className="text-[#FA812F] font-inter text-2xl font-bold">Project Experience</div>
+                        <div className="mt-8"> 
                             {menu ? <Horizonpro /> : <Verticalpro />}
                         </div>
                     </div>
                 </div>
-                <div className={`${menu ? 'w-[820px] ml-6' : ' w-[680px] ml-4'} transition-all duration-500  h-[2px] rounded-xl mt-5  bg-slate-600`}></div>
+                <div className={`${menu ? 'w-[1060px] ml-6' : ' w-[860px] ml-4'} transition-all duration-500  h-[2px] rounded-xl mt-[250px]  bg-slate-600`}></div>
             </div>
-                <div className={`${menu ? 'w-[820px] h-[600px] ml-6' : 'w-[650px] h-[600px] ml-4' } transition-all duration-500`}>
+                <div className={`${menu ? 'w-[1060px] h-[600px] ml-6' : 'w-[860px] h-[600px] ml-4' } transition-all duration-500`}>
                 <motion.div className={`${menu ? 'w-[100%]' : 'w-[100%]'} flex justify-center items-center`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ amount: 0.2 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                    <div className="text-[#FA812F] mt-2 font-inter font-bold text-xl">Skills</div>
+                    <div className="text-[#FA812F] mt-6 font-inter font-bold text-2xl">Skills</div>
                 </motion.div>
                 
                 {!menu &&(
                     <>
-                    <motion.div className={`w-[650px] h-[120px] mt-5 flex flex-col items-center`} 
+                    <motion.div className={`w-[860px] h-[120px] mt-10 flex flex-col items-center`} 
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ amount: 0.2 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <div className="text-white font-inter text-[15px]">Programming Language</div>
+                        <div className="text-white font-inter text-xl">Programming Language</div>
                         <div className="flex gap-5">
                             {Pl.map((item,index)=>(
-                                <div className="flex text-white gap-2 h-6 w-20 mt-5 outline outline-1  outline-gray-500 items-center justify-center"
+                                <div className="flex text-white gap-2 h-8 w-28 mt-5 outline outline-1  outline-gray-500 items-center justify-center"
                                     key={index}>
                                     <div>{item.icon}</div>
-                                    <div className="text-[10px]">{item.name}</div>
+                                    <div className="text-[15px]">{item.name}</div>
                                 </div>
 
                             ))}
                         </div>
                     </motion.div>
-                    <motion.div className={`w-[650px] h-[120px]  flex flex-col items-center`} 
+                    <motion.div className={`w-[860px] h-[120px]  flex flex-col items-center`} 
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ amount: 0.2 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <div className="text-white font-inter text-[15px]">Tools</div>
+                        <div className="text-white font-inter text-xl">Tools</div>
                         <div className="flex flex-wrap justify-center gap-5">
                             {ToolsI.map((item,index)=>(
-                                <div className="flex text-white gap-2 h-6 w-20 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
+                                <div className="flex text-white gap-2 h-8 w-28 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
                                     key={index}>
                                     <div>{item.icon}</div>
-                                    <div className="text-[10px]">{item.name}</div>
+                                    <div className="text-[15px]">{item.name}</div>
                                 </div>
 
                             ))}
                         </div>
                     </motion.div>
-                    <motion.div className={`w-[650px] h-[120px] mt-16 flex flex-col items-center`} 
+                    <motion.div className={`w-[860px] h-[120px] mt-16 flex flex-col items-center`} 
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ amount: 0.2 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <div className="text-white font-inter text-[15px]">Microcontroller</div>
+                        <div className="text-white font-inter text-xl">Microcontroller</div>
                         <div className="flex gap-5">
                             {Micro.map((item,index)=>(
-                                <div className="flex text-white gap-2 h-6 w-20 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
+                                <div className="flex text-white gap-2 h-8 w-28 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
                                     key={index}>
                                     <div>{item.icon}</div>
-                                    <div className="text-[10px]">{item.name}</div>
+                                    <div className="text-[15px]">{item.name}</div>
                                 </div>
 
                             ))}
@@ -293,20 +290,20 @@ export default function Home({menu}){
                     </>
                 )}
                 {menu && (
-                    <div className="flex">
+                    <div className="flex w-[1060px] justify-center mt-8">
                     <motion.div className={`w-[300px] h-[400px]  mt-5 flex flex-col items-center`} 
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ amount: 0.2 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <div className="text-white font-inter text-[15px]">Programming Language</div>
+                        <div className="text-white font-inter text-xl">Programming Language</div>
                         <div className="flex gap-5">
                             {Pl.map((item,index)=>(
-                                <div className="flex text-white gap-2 h-6 w-20 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
+                                <div className="flex text-white gap-2 h-8 w-28 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
                                     key={index}>
                                     <div>{item.icon}</div>
-                                    <div className="text-[10px]">{item.name}</div>
+                                    <div className="text-[15px]">{item.name}</div>
                                 </div>
 
                             ))}
@@ -318,13 +315,13 @@ export default function Home({menu}){
                                 viewport={{ amount: 0.2 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <div className="text-white font-inter text-[15px]">Tools</div>
+                        <div className="text-white font-inter text-xl">Tools</div>
                         <div className="flex flex-wrap justify-center gap-5">
                             {ToolsI.map((item,index)=>(
-                                <div className="flex text-white gap-2 h-6 w-20 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
+                                <div className="flex text-white gap-2 h-8 w-28 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
                                     key={index}>
                                     <div>{item.icon}</div>
-                                    <div className="text-[10px]">{item.name}</div>
+                                    <div className="text-[15px]">{item.name}</div>
                                 </div>
 
                             ))}
@@ -336,13 +333,13 @@ export default function Home({menu}){
                                 viewport={{ amount: 0.2 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <div className="text-white font-inter text-[15px]">Microcontroller</div>
+                        <div className="text-white font-inter text-xl">Microcontroller</div>
                         <div className="flex gap-5">
                             {Micro.map((item,index)=>(
-                                <div className="flex text-white gap-2 h-6 w-20 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
+                                <div className="flex text-white gap-2 h-8 w-28 mt-5 outline outline-1 outline-gray-500 items-center justify-center"
                                     key={index}>
                                     <div>{item.icon}</div>
-                                    <div className="text-[10px]">{item.name}</div>
+                                    <div className="text-[15px]">{item.name}</div>
                                 </div>
 
                             ))}
