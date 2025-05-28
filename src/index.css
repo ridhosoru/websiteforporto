@@ -12,7 +12,7 @@
   }
 
   .buttonC {
-    @apply relative w-[40px] h-[40px] items-center flex justify-center mt-2 text-[15px] font-inter text-[#FA812F] rounded-sm outline outline-2 outline-[#FA812F] hover:text-white z-[0];
+    @apply relative w-[40px] h-[25px] items-center flex justify-center mt-2 text-[15px] font-inter text-[#FA812F] rounded-sm outline outline-2 outline-[#FA812F] hover:text-white z-[0];
   }
 }
 
